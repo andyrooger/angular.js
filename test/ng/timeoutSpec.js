@@ -68,7 +68,8 @@ describe('$timeout', function() {
   }));
 
 
-  it('should forget references to deferreds when callback called even if skipApply is true', inject(function($timeout, $browser) {
+  it('should forget references to deferreds when callback called even if skipApply is true',
+      inject(function($timeout, $browser) {
     // $browser.defer.cancel is only called on cancel if the deferred object is still referenced
     var cancelSpy = spyOn($browser.defer, 'cancel').andCallThrough();
 
@@ -128,7 +129,8 @@ describe('$timeout', function() {
     }));
 
 
-    it('should forget references to relevant deferred even when exception is thrown', inject(function($timeout, $browser) {
+    it('should forget references to relevant deferred even when exception is thrown',
+        inject(function($timeout, $browser) {
       // $browser.defer.cancel is only called on cancel if the deferred object is still referenced
       var cancelSpy = spyOn($browser.defer, 'cancel').andCallThrough();
 
